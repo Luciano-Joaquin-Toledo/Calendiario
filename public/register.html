@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/login.css" />
+  <title>CalenDiario - Registro</title>
+</head>
+<body>
+  <main class="container2">
+    <header class="logo">
+      <img src="logo.svg" alt="Logo de CalenDiario" />
+    </header>
+
+    <h2>Registro</h2>
+    <p class="description">Coloca tus datos para registrarte</p>
+
+    <form class="register-form">
+        <div class="form-group2">
+            <label for="usuario" class="sr-only">Usuario</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Usuario" required />
+        </div>
+        <div class="form-group2">
+            <label for="email" class="sr-only">Email</label>
+            <input type="text" id="email" name="email" placeholder="Email" required />
+        </div>
+        <div class="form-group2">
+            <label for="telefono" class="sr-only">Telefono</label>
+            <input type="text" id="telefono" name="telefono" placeholder="Telefono" required />
+        </div>
+        <div class="form-group2">
+            <label for="contrasena" class="sr-only">Contraseña</label>
+            <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required />
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="terminos" name="terminos" required />
+            <label for="terminos">Acepto los <a href="#">términos y condiciones</a></label>
+        </div>
+        <button type="submit" class="modal-btn">Registrarse</button>
+    </form>
+    <div class="bottom-links">
+      <p>¿Necesitas ayuda? Visita nuestro <a href="#">servicio técnico</a></p>
+    </div>
+    <div id="Modal" class="Modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <h3>Te has registrado con éxito</h3>
+            <p>Ahora te vamos a redirigir a la pestaña de inicio de sesión</p>
+            <button class="login-btn cerrar-btn" onclick="window.location.href='login.html'">Entendido</button>
+        </div>
+    </div>
+  </main>
+  <script src="../../../public/assets/js/modal.js"></script>
+</body>
+</html>
