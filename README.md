@@ -5,7 +5,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Estado-En%20Desarrollo-yellow" alt="Estado" />
   <img src="https://img.shields.io/badge/PHP-%3E=7.4-blue" alt="PHP" />
-  <img src="https://img.shields.io/badge/Bootstrap-5-purple" alt="Bootstrap 5" />
+  <img src="https://img.shields.io/badge/HTML-purple" alt="HTML" />
   <img src="https://img.shields.io/badge/JavaScript-vanilla-yellowgreen" alt="JavaScript" />
 </p>
 
