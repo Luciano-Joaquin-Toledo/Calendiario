@@ -37,14 +37,69 @@
 
 ```bash
 calendiario/
-├── backend/         # Código PHP (controladores, modelos, base de datos)
-├── frontend/        # HTML, CSS, JS, assets, vistas
-├── config/          # Configuraciones generales (config.php, .env)
-├── index.php        # Entrada principal
-├── .env             # Variables de entorno (no versionar)
-├── .gitignore       # Archivos ignorados por Git
-├── LICENSE          # Licencia MIT
-└── README.md        # Documentación
+├── api/                            # Backend PHP expuesto como endpoints
+│   ├── auth/                       # Autenticación (Google, sesiones)
+│   ├── tasks/                      # Endpoints de tareas (GET, POST, PUT, DELETE)
+│   ├── notes/                      # Endpoints de notas
+│   ├── calendar/                   # Endpoints de calendario/eventos
+│   ├── utils/                      # Funciones auxiliares PHP
+│   └── db.php                      # Conexión a base de datos SQL (modo producción)
+│
+├── data/                           # JSONs simulando datos (modo desarrollo)
+│   ├── tasks.json
+│   ├── notes.json
+│   ├── calendar.json
+│   └── users.json
+│
+├── public/                         # Carpeta servida públicamente
+│   ├── index.html                  # Página principal (dashboard o redirección)
+│   ├── login.html                  # Página de login
+│   ├── panel.html                  # Panel de usuario
+│   ├── estadisticas.html          # Vista de estadísticas
+│   ├── perfil.html                # Perfil del usuario
+│
+│   ├── css/                        # Estilos por componente/página
+│   │   ├── base.css                # Estilos globales, variables, resets
+│   │   ├── layout.css              # Grid, flexbox, layout general
+│   │   ├── animations.css          # Animaciones generales
+│   │   ├── login.css               # Estilos para login y registro
+│   │   ├── panel.css               # Estilos para la vista del panel
+│   │   ├── estadisticas.css        # Estilos para estadísticas
+│   │   ├── perfil.css              # Estilos para el perfil de usuario
+│   │   ├── tasks.css               # Estilos para tareas
+│   │   ├── notes.css               # Estilos para notas
+│   │   └── calendar.css            # Estilos para calendario
+│
+│   ├── js/                         # Lógica del frontend modular
+│   │   ├── app.js                  # Inicializador general / lógica común
+│   │   ├── auth.js                 # Manejo de Google Auth
+│   │   ├── ui/                     # Componentes de UI (modales, animaciones)
+│   │   │   ├── navbar.js
+│   │   │   └── modal.js
+│   │   ├── api/                    # Requests a `/api`
+│   │   │   ├── tasksApi.js
+│   │   │   ├── notesApi.js
+│   │   │   └── calendarApi.js
+│   │   ├── pages/                  # JS específicos por vista/página
+│   │   │   ├── login.js
+│   │   │   ├── panel.js
+│   │   │   ├── estadisticas.js
+│   │   │   ├── perfil.js
+│   │   │   └── principal.js
+│
+│   └── assets/                     # Imágenes, íconos, fuentes
+│       ├── img/
+│       ├── icons/
+│       └── fonts/
+│
+├── config/                         # Configuración general del proyecto
+│   ├── config.php                  # Constantes globales (paths, flags, etc.)
+│   └── .env                        # Variables de entorno (Google API Key, DB)
+│
+├── .gitignore
+├── README.md
+└── LICENSE
+
 ```
 
 
